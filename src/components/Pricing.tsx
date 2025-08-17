@@ -60,7 +60,6 @@ export default function LumifyPricing() {
   return (
     <div className="min-h-screen bg-[#f9fafb]">
       {/* Header */}
-    
 
       {/* Hero Section */}
       <section className="px-6 py-16 text-center">
@@ -69,8 +68,8 @@ export default function LumifyPricing() {
             Choose the Right Plan for Your Business
           </h1>
           <p className="text-lg text-[#667085] mb-12 max-w-2xl mx-auto">
-            Find the plan that fits your team size and needs. Whether you&apos;re a
-            startup or an enterprise, we&apos;ve got you covered.
+            Find the plan that fits your team size and needs. Whether
+            you&apos;re a startup or an enterprise, we&apos;ve got you covered.
           </p>
 
           <div className="flex items-center justify-center space-x-6 mb-12">
@@ -110,11 +109,11 @@ export default function LumifyPricing() {
 
       {/* Pricing Cards */}
       <section className="px-6 pb-16">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start">
-          <div className="bg-gradient-to-br from-[#E0C3FC] to-[#8EC5FC] rounded-2xl p-1">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-start">
+          <div className="bg-gradient-to-br from-[#E0C3FC] to-[#8EC5FC] rounded-2xl p-1   ">
             <div className="bg-white rounded-2xl p-8 h-full">
               <div className="text-center mb-6">
-                <div className="inline-block bg-gradient-to-r from-[#2f78ee] to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <div className="inline-block bg-gradient-to-r from-[#8fa6eb] to-[#b8b8ff]   text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
                   Ideal for startups & small companies
                 </div>
                 <h3 className="text-2xl font-bold text-[#101828] mb-2">Core</h3>
@@ -251,51 +250,7 @@ export default function LumifyPricing() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="px-6 py-16 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#101828] mb-4">
-              Got Questions? We&apos;ve Got Answers
-            </h2>
-            <p className="text-[#667085]">
-              Learn more about how Lumify works, pricing, features, and support
-              options.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {faqItems.map((item, index) => (
-              <div key={index} className="border border-[#eaecf0] rounded-lg">
-                <button
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full p-6 text-left flex items-center justify-between hover:bg-[#f9fafb] transition-colors"
-                >
-                  <h3 className="font-semibold text-[#101828]">
-                    {item.question}
-                  </h3>
-                  <ChevronDown
-                    className={`h-5 w-5 text-[#667085] transition-transform ${
-                      openFaq === index ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                {openFaq === index && (
-                  <div className="px-6 pb-6">
-                    <p className="text-[#667085]">{item.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-    
-
-      {/* Footer */}
-     
+  
     </div>
   );
 }

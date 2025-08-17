@@ -13,14 +13,14 @@ const employeeData = [
     id: "EMP1234567B",
     role: "UI/UX Designer",
     badge: { text: "Lead", color: "bg-[#ceefdf] text-[#0aaf60]" },
-    avatar: "/images/women.png",
+    avatar: "/images/f2.jpg",
     fallback: "SA",
   },
   {
     name: "Marcus Johnson",
     id: "EMP9876543A",
     role: "Senior Developer",
-    badge: { text: "Sr", color: "bg-[#fff6d3] text-[#e6bb20]" },
+    badge: { text: "Sr", color: "bg-[#ffc6ff] text-[#e6bb20]" },
     avatar: "/images/man.png",
     fallback: "MJ",
   },
@@ -29,7 +29,7 @@ const employeeData = [
     id: "EMP5555777C",
     role: "Product Manager",
     badge: { text: "Lead", color: "bg-[#ceefdf] text-[#0aaf60]" },
-    avatar: "/images/women.png",
+    avatar: "/images/f1.jpg",
     fallback: "ER",
   },
 ];
@@ -40,14 +40,14 @@ const secondaryEmployeeData = [
     id: "EMP5731343",
     role: "UI/UX Designer",
     badge: { text: "Sr", color: "bg-[#fff6d3] text-[#e6bb20]" },
-    avatar: "/images/man.png",
+    avatar: "/images/m1.jpg",
     fallback: "JR",
   },
   {
     name: "Lisa Chen",
     id: "EMP2468135",
     role: "Frontend Developer",
-    badge: { text: "Mid", color: "bg-[#f4f0ff] text-[#8c62ff]" },
+    badge: { text: "Mid", color: "bg-[#90e0ef] text-[#8c62ff]" },
     avatar: "/images/women.png",
     fallback: "LC",
   },
@@ -55,7 +55,7 @@ const secondaryEmployeeData = [
     name: "David Kim",
     id: "EMP1357924",
     role: "Backend Developer",
-    badge: { text: "Sr", color: "bg-[#fff6d3] text-[#e6bb20]" },
+    badge: { text: "Sr", color: "bg-[#9381ff] text-[#e6bb20]" },
     avatar: "/images/man.png",
     fallback: "DK",
   },
@@ -65,7 +65,7 @@ const payrollData = [
   {
     name: "Adam Kovaleni",
     role: "Freelancer",
-    avatar: "/images/man.png",
+    avatar: "/images/m1.jpg",
     fallback: "AK",
     amount: "$2,670",
     date: "April 1, 2022",
@@ -81,7 +81,7 @@ const payrollData = [
   {
     name: "James Wilson",
     role: "Part-time",
-    avatar: "/images/man.png",
+    avatar: "/images/f1.jpg",
     fallback: "JW",
     amount: "$1,890",
     date: "April 1, 2022",
@@ -120,7 +120,7 @@ export default function BentoGrids() {
   const currentPayroll = payrollData[currentPayrollIndex];
 
   return (
-    <div className="min-h-screen bg-[#f5f9ff] py-16 px-4">
+    <div className="min-h-screen bg-[#f9f9f9] py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16 animate-in fade-in duration-700">
@@ -130,16 +130,16 @@ export default function BentoGrids() {
             features
           </h1>
           <p className="text-lg text-[#667085] max-w-2xl mx-auto leading-relaxed">
-            Lumify isn&apos;t just another HR tool — it&apos;s a smarter way to manage
-            talent. With AI-driven automation at its core, we help companies see
-            further, act faster, and manage better.
+            Lumify isn&apos;t just another HR tool — it&apos;s a smarter way to
+            manage talent. With AI-driven automation at its core, we help
+            companies see further, act faster, and manage better.
           </p>
         </div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Centralized Employee Data */}
-          <Card className="p-8 bg-white border-0 shadow-sm hover:shadow-xl  transition-all  ease-out animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100 group">
+          <Card className="p-8 bg-[#f2f4f7] border-0 shadow-sm hover:shadow-xl  transition-all  ease-out animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100 group">
             <div className="flex items-start gap-4 mb-6">
               <div className="w-12 h-12 bg-[#f5f9ff] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <svg
@@ -297,7 +297,7 @@ export default function BentoGrids() {
           </Card>
 
           {/* Automated Payroll Processing */}
-          <Card className="p-8 bg-white border-0 shadow-sm hover:shadow-xl  transition-all  ease-out animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 group">
+          <Card className="p-8 bg-[#f2f4f7] border-0 shadow-sm hover:shadow-xl  transition-all  ease-out animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 group">
             <div className="flex items-start gap-4 mb-6">
               <div className="w-12 h-12 bg-[#f5f9ff] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <svg
@@ -536,7 +536,11 @@ export default function BentoGrids() {
                       Optimize HR processes with customizable workflows for
                       approvals & notifications.
                     </p>
-                    <img src="/images/card.png" alt="Customizable Workflow Automation" className="w-full rounded-lg  transition-transform duration-700 ease-out animate-in fade-in slide-in-from-right mt-2   delay-800" />
+                    <img
+                      src="/images/card.png"
+                      alt="Customizable Workflow Automation"
+                      className="w-full rounded-lg  transition-transform duration-700 ease-out animate-in fade-in slide-in-from-right mt-2   delay-800"
+                    />
                   </div>
                 </div>
               </div>
