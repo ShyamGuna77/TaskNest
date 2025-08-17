@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 
 
 
 export default function Cta() {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gray-50">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-gray-50 -mt-8">
       <div className="relative w-full max-w-6xl mx-auto">
         {/* CTA Section */}
         <div className="relative overflow-hidden rounded-[18px] bg-gradient-to-br from-[#4D89FE] via-[#6B9BFF] to-[#ADC9FF] px-6 py-12 md:px-16 lg:px-28 lg:py-16">

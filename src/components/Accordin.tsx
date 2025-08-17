@@ -10,7 +10,7 @@ const Accordin = () => {
   return (
     <>
       <section className="py-16 bg-[#f9fafb]">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1d2939] mb-4">
               Got Questions? We&apos;ve Got Answers
@@ -27,10 +27,10 @@ const Accordin = () => {
               className="bg-white border border-[#eaecf0] rounded-lg px-6"
             >
               <AccordionTrigger className="text-left font-semibold text-[#1d2939] hover:no-underline">
-                What is Lumify?
+                What is TaskNest?
               </AccordionTrigger>
               <AccordionContent className="text-[#667085] pb-6">
-                Lumify is an AI-powered HR SaaS platform that helps companies
+                TaskNest is an AI-powered HR SaaS platform that helps companies
                 manage recruitment, employee engagement, payroll, attendance,
                 and more — all in one place.
               </AccordionContent>
@@ -41,7 +41,7 @@ const Accordin = () => {
               className="bg-white border border-[#eaecf0] rounded-lg px-6"
             >
               <AccordionTrigger className="text-left font-semibold text-[#1d2939] hover:no-underline">
-                Key Features of Lumify
+                Key Features of TaskNest
               </AccordionTrigger>
               <AccordionContent className="text-[#667085] pb-6">
                 Our platform includes advanced recruitment tools, employee
@@ -55,10 +55,10 @@ const Accordin = () => {
               className="bg-white border border-[#eaecf0] rounded-lg px-6"
             >
               <AccordionTrigger className="text-left font-semibold text-[#1d2939] hover:no-underline">
-                Who Can Benefit from Lumify?
+                Who Can Benefit from TaskNest?
               </AccordionTrigger>
               <AccordionContent className="text-[#667085] pb-6">
-                Lumify is perfect for growing companies, HR departments, and
+                TaskNest is perfect for growing companies, HR departments, and
                 businesses looking to modernize their human resources management
                 with AI-powered solutions.
               </AccordionContent>
@@ -69,10 +69,10 @@ const Accordin = () => {
               className="bg-white border border-[#eaecf0] rounded-lg px-6"
             >
               <AccordionTrigger className="text-left font-semibold text-[#1d2939] hover:no-underline">
-                Why Choose Lumify Over Competitors?
+                Why Choose TaskNest Over Competitors?
               </AccordionTrigger>
               <AccordionContent className="text-[#667085] pb-6">
-                Lumify offers superior AI integration, intuitive user
+                TaskNest offers superior AI integration, intuitive user
                 experience, comprehensive features, and exceptional customer
                 support at competitive pricing.
               </AccordionContent>
