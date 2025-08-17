@@ -1,5 +1,3 @@
-
-
 export default function Hero() {
   return (
     <div
@@ -34,7 +32,7 @@ export default function Hero() {
       <img
         src="https://api.builder.io/api/v1/image/assets/TEMP/2aad045bcb1d0ec7ce10151ed5f308bfbfeccfe1?width=2884"
         alt=""
-        className="absolute object-cover z-0"
+        className="absolute object-cover z-0 hidden sm:block"
         style={{
           width: "1442px",
           height: "572px",
@@ -44,28 +42,12 @@ export default function Hero() {
       />
 
       {/* Main content container */}
-      <div
-        className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 pt-16 pb-24 min-h-screen"
-        style={{
-          paddingLeft: "110px",
-          paddingRight: "110px",
-          paddingTop: "159px",
-        }}
-      >
-        <div
-          className="w-full flex flex-col items-center"
-          style={{ maxWidth: "1216px", gap: "64px" }}
-        >
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-[110px] pt-24 sm:pt-28 lg:pt-[159px] pb-16 sm:pb-20 lg:pb-24 min-h-screen">
+        <div className="w-full flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">
           {/* Hero content */}
-          <div
-            className="w-full flex flex-col items-center"
-            style={{ maxWidth: "879px", gap: "32px" }}
-          >
+          <div className="w-full flex flex-col items-center gap-6 sm:gap-8 lg:gap-12">
             {/* Header section */}
-            <div
-              className="flex flex-col items-center justify-center w-full"
-              style={{ height: "284px", gap: "24px" }}
-            >
+            <div className="flex flex-col items-center justify-center w-full gap-4 sm:gap-6 lg:gap-8">
               {/* Badge */}
               <div
                 className="flex items-center border rounded-full"
@@ -93,11 +75,11 @@ export default function Hero() {
                       className="text-center font-medium font-instrument"
                       style={{
                         color: "#17191C",
-                        fontSize: "14px",
-                        lineHeight: "20px",
+                        fontSize: "12px",
+                        lineHeight: "18px",
                       }}
                     >
-                      Lumify
+                      TaskNest
                     </span>
                   </div>
                 </div>
@@ -105,7 +87,7 @@ export default function Hero() {
                   className="text-center font-normal font-inter"
                   style={{
                     color: "#FFF",
-                    fontSize: "14px",
+                    fontSize: "12px",
                     lineHeight: "normal",
                   }}
                 >
@@ -115,25 +97,20 @@ export default function Hero() {
 
               {/* Main heading */}
               <h1
-                className="text-center font-semibold font-inter w-full"
+                className="text-center font-semibold font-inter w-full px-2 sm:px-4 lg:px-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight sm:leading-tight lg:leading-[72px] tracking-tight"
                 style={{
                   color: "#FFF",
-                  fontSize: "60px",
-                  lineHeight: "72px",
-                  letterSpacing: "-1.2px",
                   fontWeight: "600",
                 }}
               >
-                Lumify: Illuminating the Future of Work with AI
+                TaskNest: Illuminating the Future of Work with AI
               </h1>
 
               {/* Supporting text */}
               <p
-                className="text-center font-normal font-inter w-full"
+                className="text-center font-normal font-inter w-full px-2 sm:px-4 lg:px-0 text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed max-w-2xl sm:max-w-3xl lg:max-w-4xl"
                 style={{
                   color: "#FFF",
-                  fontSize: "20px",
-                  lineHeight: "30px",
                   fontWeight: "400",
                 }}
               >
@@ -144,15 +121,12 @@ export default function Hero() {
             </div>
 
             {/* CTA section */}
-            <div
-              className="flex flex-col items-center w-full"
-              style={{ gap: "12px" }}
-            >
+            <div className="flex flex-col items-center w-full px-2 sm:px-4 lg:px-0 gap-4 sm:gap-6">
               {/* Buttons */}
-              <div className="flex items-center" style={{ gap: "13px" }}>
+              <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
                 {/* Download button */}
                 <div
-                  className="flex flex-col items-start rounded-lg"
+                  className="flex flex-col items-start rounded-lg w-full sm:w-auto"
                   style={{
                     padding: "3.542px",
                     gap: "2.024px",
@@ -162,7 +136,7 @@ export default function Hero() {
                   }}
                 >
                   <div
-                    className="flex items-center justify-center border rounded-lg"
+                    className="flex items-center justify-center border rounded-lg w-full sm:w-auto"
                     style={{
                       padding: "10.627px 12.145px",
                       gap: "8.096px",
@@ -196,7 +170,7 @@ export default function Hero() {
                       />
                     </svg>
                     <span
-                      className="font-semibold font-inter"
+                      className="font-semibold font-inter text-center sm:text-left whitespace-nowrap"
                       style={{
                         color: "#06071A",
                         fontSize: "12px",
@@ -211,7 +185,7 @@ export default function Hero() {
 
                 {/* Buy now button */}
                 <div
-                  className="flex flex-col items-start rounded-lg"
+                  className="flex flex-col items-start rounded-lg w-full sm:w-auto"
                   style={{
                     padding: "3.542px",
                     gap: "2.024px",
@@ -221,7 +195,7 @@ export default function Hero() {
                   }}
                 >
                   <div
-                    className="flex items-center justify-center border rounded-lg"
+                    className="flex items-center justify-center border rounded-lg w-full sm:w-auto"
                     style={{
                       padding: "10.627px 12.145px",
                       gap: "8.096px",
@@ -235,7 +209,7 @@ export default function Hero() {
                     }}
                   >
                     <span
-                      className="font-semibold font-inter"
+                      className="font-semibold font-inter text-center sm:text-left whitespace-nowrap"
                       style={{
                         color: "#FFF",
                         fontSize: "12px",
@@ -251,10 +225,9 @@ export default function Hero() {
 
               {/* Small text */}
               <p
-                className="text-center font-normal font-inter w-full"
+                className="text-center font-normal font-inter w-full px-2 sm:px-4 lg:px-0 text-xs sm:text-sm"
                 style={{
                   color: "#475467",
-                  fontSize: "12px",
                   lineHeight: "18px",
                   fontWeight: "400",
                 }}
@@ -265,10 +238,7 @@ export default function Hero() {
           </div>
 
           {/* Dashboard mockup */}
-          <div
-            className="w-full flex justify-center items-center"
-            style={{ maxWidth: "932px" }}
-          >
+          <div className="w-full flex justify-center items-center px-2 sm:px-4 lg:px-0">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/80fbf3b73fa1dba5eb74bdb055b7bfb5d9d9bb29?width=1864"
               alt="Lumify Dashboard"
