@@ -1,3 +1,8 @@
+"use client";
+
+import { Button } from "./ui/button";
+import { motion } from "motion/react";
+
 export default function Hero() {
   return (
     <div
@@ -7,7 +12,7 @@ export default function Hero() {
       }}
     >
       {/* Background clouds */}
-      <img
+      <motion.img
         src="https://api.builder.io/api/v1/image/assets/TEMP/7f7092bc3e0670a189b47742156cde6b11c69c90?width=1252"
         alt=""
         className="absolute object-cover z-0 hidden lg:block"
@@ -17,8 +22,11 @@ export default function Hero() {
           top: "-188px",
           right: "-98px",
         }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
       />
-      <img
+      <motion.img
         src="https://api.builder.io/api/v1/image/assets/TEMP/1bbe67f6aff728cb6d4ba0652610835b218cdc93?width=1252"
         alt=""
         className="absolute object-cover z-0 hidden lg:block"
@@ -28,8 +36,11 @@ export default function Hero() {
           top: "-142px",
           left: "-452px",
         }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, delay: 0.7 }}
       />
-      <img
+      <motion.img
         src="https://api.builder.io/api/v1/image/assets/TEMP/2aad045bcb1d0ec7ce10151ed5f308bfbfeccfe1?width=2884"
         alt=""
         className="absolute object-cover z-0 hidden sm:block"
@@ -39,17 +50,25 @@ export default function Hero() {
           top: "461px",
           left: "-63px",
         }}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.9 }}
       />
 
       {/* Main content container */}
       <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-[110px] pt-24 sm:pt-28 lg:pt-[159px] pb-16 sm:pb-20 lg:pb-24 min-h-screen">
         <div className="w-full flex flex-col items-center gap-8 sm:gap-12 lg:gap-16">
           {/* Hero content */}
-          <div className="w-full flex flex-col items-center gap-6 sm:gap-8 lg:gap-12">
+          <motion.div
+            className="w-full flex flex-col items-center gap-6 sm:gap-8 lg:gap-12"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             {/* Header section */}
             <div className="flex flex-col items-center justify-center w-full gap-4 sm:gap-6 lg:gap-8">
               {/* Badge */}
-              <div
+              <motion.div
                 className="flex items-center border rounded-full"
                 style={{
                   gap: "10px",
@@ -58,6 +77,9 @@ export default function Hero() {
                   borderColor: "#E6E2E0",
                   backgroundColor: "rgba(255, 255, 255, 0.40)",
                 }}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <div
                   className="flex items-center justify-center rounded-full"
@@ -93,35 +115,46 @@ export default function Hero() {
                 >
                   Trusted by 100+ Companies
                 </span>
-              </div>
+              </motion.div>
 
               {/* Main heading */}
-              <h1
+              <motion.h1
                 className="text-center font-semibold font-inter w-full px-2 sm:px-4 lg:px-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight sm:leading-tight lg:leading-[72px] tracking-tight"
                 style={{
                   color: "#FFF",
                   fontWeight: "600",
                 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
               >
                 TaskNest: Illuminating the Future of Work with AI
-              </h1>
+              </motion.h1>
 
               {/* Supporting text */}
-              <p
+              <motion.p
                 className="text-center font-normal font-inter w-full px-2 sm:px-4 lg:px-0 text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed max-w-2xl sm:max-w-3xl lg:max-w-4xl"
                 style={{
                   color: "#FFF",
                   fontWeight: "400",
                 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
               >
                 A modern HR SaaS platform powered by artificial intelligence,
                 bringing clarity, efficiency, and insight to your people
                 management.
-              </p>
+              </motion.p>
             </div>
 
             {/* CTA section */}
-            <div className="flex flex-col items-center w-full px-2 sm:px-4 lg:px-0 gap-4 sm:gap-6">
+            <motion.div
+              className="flex flex-col items-center w-full px-2 sm:px-4 lg:px-0 gap-4 sm:gap-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+            >
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
                 {/* Download button */}
@@ -135,7 +168,7 @@ export default function Hero() {
                       "linear-gradient(180deg, #E9E9E9 0%, #E9E9E9 0.01%, #FFF 100%)",
                   }}
                 >
-                  <div
+                  <Button
                     className="flex items-center justify-center border rounded-lg w-full sm:w-auto"
                     style={{
                       padding: "10.627px 12.145px",
@@ -180,7 +213,7 @@ export default function Hero() {
                     >
                       Download for Apple Silicon
                     </span>
-                  </div>
+                  </Button>
                 </div>
 
                 {/* Buy now button */}
@@ -194,7 +227,7 @@ export default function Hero() {
                       "linear-gradient(180deg, #060612 0%, #060612 0.01%, #060612 100%)",
                   }}
                 >
-                  <div
+                  <Button
                     className="flex items-center justify-center border rounded-lg w-full sm:w-auto"
                     style={{
                       padding: "10.627px 12.145px",
@@ -219,27 +252,35 @@ export default function Hero() {
                     >
                       Buy now
                     </span>
-                  </div>
+                  </Button>
                 </div>
               </div>
 
               {/* Small text */}
-              <p
+              <motion.p
                 className="text-center font-normal font-inter w-full px-2 sm:px-4 lg:px-0 text-xs sm:text-sm"
                 style={{
                   color: "#475467",
                   lineHeight: "18px",
                   fontWeight: "400",
                 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 1.4 }}
               >
                 Free version available. No credit card required.
-              </p>
-            </div>
-          </div>
+              </motion.p>
+            </motion.div>
+          </motion.div>
 
           {/* Dashboard mockup */}
-          <div className="w-full flex justify-center items-center px-2 sm:px-4 lg:px-0">
-            <img
+          <motion.div
+            className="w-full flex justify-center items-center px-2 sm:px-4 lg:px-0"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.2 }}
+          >
+            <motion.img
               src="https://api.builder.io/api/v1/image/assets/TEMP/80fbf3b73fa1dba5eb74bdb055b7bfb5d9d9bb29?width=1864"
               alt="Lumify Dashboard"
               className="w-full rounded-lg border shadow-lg"
@@ -249,8 +290,10 @@ export default function Hero() {
                 borderWidth: "11px",
                 borderColor: "rgba(238, 233, 233, 0.30)",
               }}
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

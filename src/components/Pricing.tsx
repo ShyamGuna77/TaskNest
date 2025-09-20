@@ -1,7 +1,6 @@
-"use client"
+"use client";
 
 import {
-  ChevronDown,
   Users,
   Shield,
   BarChart3,
@@ -15,62 +14,43 @@ import {
   Lock,
   Server,
   Award,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useState } from "react"
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { motion } from "motion/react";
 
 export default function LumifyPricing() {
   const [isAnnual, setIsAnnual] = useState(false);
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
-
-  const faqItems = [
-    {
-      question: "Can I switch plans later?",
-      answer:
-        "Yes! You can upgrade or downgrade anytime as your team grows or your needs evolve.",
-    },
-    {
-      question: "Is there a free trial available?",
-      answer:
-        "Yes, we offer a 14-day free trial for all plans. No credit card required to get started.",
-    },
-    {
-      question: "Do you offer discounts for annual billing?",
-      answer:
-        "Yes! Annual billing comes with a 20% discount compared to monthly billing.",
-    },
-    {
-      question: "What happens after my trial ends?",
-      answer:
-        "After your trial ends, you can choose to upgrade to a paid plan or your account will be downgraded to our free tier.",
-    },
-    {
-      question: "Is my data secure with Lumify?",
-      answer:
-        "We use enterprise-grade security measures including encryption, regular backups, and SOC 2 compliance.",
-    },
-    {
-      question:
-        "Can Lumify integrate with other tools like Slack or Google Workspace?",
-      answer:
-        "Yes, Lumify integrates with over 50+ popular tools including Slack, Google Workspace, Microsoft Teams, and more.",
-    },
-  ];
 
   return (
-    <div className="min-h-screen bg-[#f9fafb]">
+    <div className="min-h-screen bg-[#f9f9f9]">
       {/* Header */}
 
       {/* Hero Section */}
-      <section className="px-6 py-16 text-center">
+      <motion.section
+        className="px-6 py-16 text-center"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#101828] mb-6">
+          <motion.h1
+            className="text-4xl md:text-5xl font-bold text-[#101828] mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             Choose the Right Plan for Your Business
-          </h1>
-          <p className="text-lg text-[#667085] mb-12 max-w-2xl mx-auto">
+          </motion.h1>
+          <motion.p
+            className="text-lg text-[#667085] mb-12 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             Find the plan that fits your team size and needs. Whether
             you&apos;re a startup or an enterprise, we&apos;ve got you covered.
-          </p>
+          </motion.p>
 
           <div className="flex items-center justify-center space-x-6 mb-12">
             <button
@@ -105,12 +85,23 @@ export default function LumifyPricing() {
             </button>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Pricing Cards */}
-      <section className="px-6 pb-16">
+      <motion.section
+        className="px-6 pb-16"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+      >
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-start">
-          <div className="bg-gradient-to-br from-[#E0C3FC] to-[#8EC5FC] rounded-2xl p-1   ">
+          <motion.div
+            className="bg-gradient-to-br from-[#E0C3FC] to-[#8EC5FC] rounded-2xl p-1"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            whileHover={{ scale: 1.02 }}
+          >
             <div className="bg-white rounded-2xl p-8 h-full">
               <div className="text-center mb-6">
                 <div className="inline-block bg-gradient-to-r from-[#8fa6eb] to-[#b8b8ff]   text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -165,9 +156,15 @@ export default function LumifyPricing() {
                 </ul>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="bg-[#17191c] rounded-2xl p-1 md:scale-105 md:mt-[-20px]">
+          <motion.div
+            className="bg-[#17191c] rounded-2xl p-1 md:scale-105 md:mt-[-20px]"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            whileHover={{ scale: 1.02 }}
+          >
             <div className="bg-white rounded-2xl p-8 h-full">
               <div className="text-center mb-6">
                 <div className="inline-block bg-[#17191c] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -246,11 +243,9 @@ export default function LumifyPricing() {
                 </ul>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </section>
-
-  
+      </motion.section>
     </div>
   );
 }

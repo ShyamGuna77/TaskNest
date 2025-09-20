@@ -1,4 +1,5 @@
 import { TestimonialsColumn } from "@/components/testimonials-columns-1";
+import { motion } from "motion/react";
 
 const testimonials = [
   {
@@ -63,36 +64,72 @@ const thirdColumn = testimonials.slice(6, 9);
 
 export const Testimonials = () => {
   return (
-    <section className="bg-[#F9F9F9] my-20 relative">
-      <div className="container z-10 mx-auto">
-        <div className="flex flex-col items-center justify-center max-w-[540px] mx-auto">
+    <motion.section
+      className="bg-[#F9F9F9] my-20 relative"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      <div className="container z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          className="flex flex-col items-center justify-center max-w-[540px] mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <div className="flex justify-center">
-            <div className="border py-1 px-4 rounded-lg">Testimonials</div>
+            <motion.div
+              className="border py-1 px-4 rounded-lg"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              Testimonials
+            </motion.div>
           </div>
 
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5">
+          <motion.h2
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
             What our users say
-          </h2>
-          <p className="text-center mt-5 opacity-75">
+          </motion.h2>
+          <motion.p
+            className="text-center mt-5 opacity-75"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            viewport={{ once: true }}
+          >
             See what our customers have to say about us.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
-          <TestimonialsColumn testimonials={firstColumn} duration={15} />
-          <TestimonialsColumn
-            testimonials={secondColumn}
-            className="hidden md:block"
-            duration={19}
-          />
-          <TestimonialsColumn
-            testimonials={thirdColumn}
-            className="hidden lg:block"
-            duration={17}
-          />
-        </div>
+        <motion.div
+          className="flex justify-center gap-2 sm:gap-4 md:gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          viewport={{ once: true }}
+        >
+          <div className="w-full max-w-xs sm:max-w-sm">
+            <TestimonialsColumn testimonials={firstColumn} duration={15} />
+          </div>
+          <div className="w-full max-w-xs sm:max-w-sm hidden md:block">
+            <TestimonialsColumn testimonials={secondColumn} duration={19} />
+          </div>
+          <div className="w-full max-w-xs sm:max-w-sm hidden lg:block">
+            <TestimonialsColumn testimonials={thirdColumn} duration={17} />
+          </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,21 +1,19 @@
+"use client";
+
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import Accordin from "@/components/Accordin";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+
 import {
   Mail,
   MessageCircle,
   Building,
   Phone,
   Send,
-  ChevronDown,
+
   Facebook,
   Instagram,
   Linkedin,
@@ -27,7 +25,7 @@ import Footer from "@/components/Footer";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-[#F9F9F9]">
+    <div className="min-h-screen">
       {/* Header */}
       <Navbar />
 
@@ -40,8 +38,8 @@ export default function ContactPage() {
             </h1>
             <p className="text-lg text-[#667085] leading-relaxed">
               Whether you have a question about our product, want to schedule a
-              demo, or are interested in joining our team — feel free to reach
-              out. The Lumify team is always ready to help.
+              demo, or are interested in joining our team  feel free to reach
+              out. The Tasknest team is always ready to help.
             </p>
           </div>
         </div>
